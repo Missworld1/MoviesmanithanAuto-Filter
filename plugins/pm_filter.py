@@ -37,14 +37,14 @@ async def next_page(bot, query):
 
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("😁 𝗛𝗲𝘆 𝗙𝗿𝗶𝗲𝗻𝗱,𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗬𝗼𝘂𝗿𝘀𝗲𝗹𝗳.", show_alert=True)
+        return await query.answer("😁 𝙨𝙤𝙣𝙙𝙝𝙖𝙢𝙖𝙖 𝙩𝙝𝙚𝙙𝙪𝙮𝙖𝙖 𝙠𝙪𝙩𝙩𝙞𝙠𝙪𝙢𝙟𝙖𝙣.", show_alert=True)
     try:
         offset = int(offset)
     except:
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("𝐋𝐢𝐧𝐤 𝐄𝐱𝐩𝐢𝐫𝐞𝐝 𝐊𝐢𝐧𝐝𝐥𝐲 𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡 𝐀𝐠𝐚𝐢𝐧 🙂.",show_alert=True)
+        await query.answer("𝐋𝐢𝐧𝐤 𝙆𝙖𝙖𝙣𝙪𝙢 𝙈𝙖𝙧𝙪𝙗𝙖𝙙𝙞𝙪𝙢 𝙩𝙝𝙚𝙙𝙪 🙂.",show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -110,12 +110,12 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("😁 𝗛𝗲𝘆 𝗙𝗿𝗶𝗲𝗻𝗱,𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗬𝗼𝘂𝗿𝘀𝗲𝗹𝗳.", show_alert=True)
+        return await query.answer("😁 𝙨𝙤𝙣𝙙𝙝𝙖𝙢𝙖𝙖 𝙩𝙝𝙚𝙙𝙪𝙮𝙖𝙖 𝙠𝙪𝙩𝙩𝙞𝙠𝙪𝙢𝙟𝙖𝙣.", show_alert=True)
     if movie_  == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
-        return await query.answer("𝐋𝐢𝐧𝐤 𝐄𝐱𝐩𝐢𝐫𝐞𝐝 𝐊𝐢𝐧𝐝𝐥𝐲 𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡 𝐀𝐠𝐚𝐢𝐧 🙂.", show_alert=True)
+        return await query.answer("𝙇𝙞𝙣𝙠 𝙠𝙖𝙖𝙣𝙪𝙢 𝙢𝙖𝙧𝙪𝙗𝙖𝙙𝙞𝙪𝙢 𝙩𝙝𝙚𝙙𝙪 🙂.", show_alert=True)
     movie = movies[(int(movie_))]
     await query.answer('Checking For Movie In Database...')
     k = await manual_filters(bot, query.message, text=movie)
@@ -125,7 +125,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('𝚃𝙷𝙸𝚂 𝙼𝙾𝚅𝙸𝙴 I𝚂 𝙽𝙾𝚃 𝚈𝙴𝚃 𝚁𝙴𝙻𝙴𝙰𝚂𝙴𝙳 𝙾𝚁 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝙳𝙰𝚃𝚂𝙱𝙰𝚂𝙴💌')
+            k = await query.message.edit('𝐒𝐫𝐲 𝐯𝐫𝐨 𝐤𝐨𝐜𝐡𝐮𝐤𝐚𝐝𝐡𝐚 𝐚𝐝𝐡𝐮 𝐢𝐧𝐠𝐚 𝐢𝐥𝐥𝐚💌')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -367,7 +367,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("🥺𝗙𝗿𝗶𝗲𝗻𝗱.. 𝗧𝗵𝗮𝘁'𝘀 𝗡𝗼𝘁 𝗙𝗮𝗶𝗿 😓𝗣𝗹𝗲𝗮𝘀𝗲 𝗝𝗼𝗶𝗻 𝗧𝗵𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹..🥺",show_alert=True)
+            await query.answer("🥺𝙄𝙫𝙖𝙧𝙪 𝙟𝙤𝙞𝙣 𝙥𝙖𝙣𝙧𝙖 𝙢𝙖𝙖𝙧𝙞 𝙣𝙖𝙙𝙞𝙥𝙖𝙧𝙖𝙢 𝙣𝙖𝙖𝙣𝙜𝙖 𝙣𝙖𝙢𝙗𝙖𝙣𝙪𝙢𝙖𝙖𝙢 𝙟𝙤𝙞𝙣 𝙥𝙖𝙣𝙣𝙪 𝙫𝙧𝙤..🥺",show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -398,7 +398,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs 💠', url='https://t.me/Cynitebots'),     
+            InlineKeyboardButton('💠 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs 💠', url='https://t.me/allnewmoviesszz'),     
             InlineKeyboardButton('♻️ ʜᴇʟᴘ ♻️', callback_data='help')],[
             InlineKeyboardButton('♻️ ᴀʙᴏᴜᴛ ♻️', callback_data='about'), 
             InlineKeyboardButton('🔍sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''), ]]
@@ -428,7 +428,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('♥️ SOURCE ♥️', url='https://github.com/CyniteOfficial/Auto-Filter')
+            InlineKeyboardButton('♥️ SOURCE ♥️', url='http://t.me/Madumuttibot')
             ],[
             InlineKeyboardButton('🏠 𝗛𝗼𝗺𝗲 🏠', callback_data='start'),
             InlineKeyboardButton('🔐 𝗖𝗹𝗼𝘀𝗲 🔐', callback_data='close_data')
@@ -713,7 +713,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("𝙲𝙷𝙴𝙲𝙺 𝚈𝙾𝚄𝚁 𝙼𝙾𝚅𝙸𝙴 𝙾𝙽 𝚃𝙷𝙴 𝙶𝙸𝚅𝙴𝙽 𝙻𝙸𝚂𝚃 𝙰𝙽𝙳 𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙼𝙾𝚅𝙸𝙴𝚂.📌", reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply("𝙄𝙙𝙝𝙪𝙡𝙖 𝙚𝙙𝙝𝙖𝙖𝙘𝙝𝙪𝙢 𝙩𝙝𝙚𝙧𝙪𝙢𝙖𝙣𝙪 𝙥𝙖𝙖𝙩𝙝𝙪 𝙚𝙙𝙪𝙩𝙝𝙪𝙠𝙠𝙤.📌", reply_markup=InlineKeyboardMarkup(btn))
     
 
 async def manual_filters(client, message, text=False):
