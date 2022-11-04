@@ -96,5 +96,5 @@ python3 bot.py
 • /broadcast - to broadcast a message to Cynite users
 ```
 
-Cʀᴇᴅɪᴛ ›› [𝐎𝐩𝐮𝐬 𝐓𝐞𝐜𝐡𝐳](https://t.me/allnewmoviesszz) || [𝐂𝐨𝐧𝐭𝐚𝐜𝐭](https://t.me/+V1bp8WhXAswyMTE1)                                                                                                                                                                                    
-𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› [𝗔𝗹𝗹𝗻𝗲𝘄 𝗺𝗼𝘃𝗶𝗲𝘀](https://t.me/allnewmoviesszz)
+Cʀᴇᴅɪᴛ ›› [𝐎𝐩𝐮𝐬 𝐓𝐞𝐜𝐡𝐳](https://t.me/Movies_Tamizhass) || [𝐂𝐨𝐧𝐭𝐚𝐜𝐭](https://t.me/+V1bp8WhXAswyMTE1)                                                                                                                                                                                    
+𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› [𝗔𝗹𝗹𝗻𝗲𝘄 𝗺𝗼𝘃𝗶𝗲𝘀](https://t.me/Movies_Tamizhass)
